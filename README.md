@@ -31,7 +31,9 @@ Probably use some conference style slides and google slides?
 - [X] Decide where to host the slides, we could:
     - put everything on google slides.
     - work separately using the slide template and combine.
-- [ ] After prepping, meet with Prof and present slides, **before 16th Oct 2026**.
+- [ ] Mock run through, **Oct 14th**.
+- [ ] After prepping, meet with Prof and present slides, **Oct 15th**.
+- [ ] Final Presentation! **Oct 20th**
 
 ## Split 
 
@@ -41,7 +43,7 @@ Probably use some conference style slides and google slides?
 
 ## where to put slides?
 
-Google slides.
+Google slides:
 https://docs.google.com/presentation/d/1RNgHDe8UTmSaNFSt3tH2jcJ1pC-ryrlb7U2DTo68Dyc/edit?usp=sharing
 
 ## Run through
@@ -50,10 +52,10 @@ Wednesday - 2pm run through -- zoom/gmeets
 
 ## Present to prof before - candidate timings
 
-Office hours: Thursdays 2-3 pm (starting 9/10)-> :tick: -- Is best probably
-Friday: 
-    Anh before 1
-    Anush free entire day
-    Arjun (12-1 -> X)
+Office hours: Thursdays 2-3 pm (starting 9/10)-> :tick: -- Is best probably  
+Friday:   
+    - Anh before 1  
+    - Anushka free entire day  
+    - Arjun (12-1 -> X)  
 
 

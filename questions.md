@@ -16,13 +16,13 @@ Scheduler interleaving might cause a data race to be missed, or worse make this 
 Section 3.2, Performance, p10
 > Applications typically slow down by a factor of 10 to 30 while using Eraser. *This time dilation can change the order in which threads are scheduled and can affect the behavior of time-sensitive applications.* Our experience suggests that differences in thread scheduling have little effect on Eraser’s results. We have less experience with very time-sensitive applications, and it is possible that they would benefit from a more efficient monitoring technique.
 
-They admit that the slowdown can cause thread interleavings to change and thus cause some data races to be missed.
+They admit that the slowdown can cause thread interleavings to change and thus cause some data races to be missed but then say that the interleaving would have little effect on Eraser's results. How believeable is this statement?
 
 Section 3.4, Race Detection in an OS Kernel, p12
 > Another difference is that operating systems make greater use of post/ wait style synchronization...
 > ...Because semaphores are not “owned” it is difficult for Eraser to infer which data they are being used to protect, leading it to issue false alarms.
 
-A question one might have is whether synchronization primitives other than locks can be used for this lockset algorithm. The short answer is no. The long answer is yes with careful implementation that is probably not worth the effort.
+A question one might have is whether synchronization primitives other than locks can be used for this lockset algorithm. The answer is no.
 
 Section 4.1, AltaVista, p14
 > We found a large number of reported races, most of which turned out to be false alarms. These were primarily caused by memory reuse, followed by private locks and benign races. The benign races found in Ni2 are particularly interesting, because they exemplify the intentional use of races to reduce locking overhead.
@@ -34,7 +34,8 @@ Another instance:
 > ...Inserting nine annotations in the Ni2 library, five in the ft test harness, and 10 in the mhttpd server reduced the number of reported races from more than a hundred to zero.
 
 Who certifies that a race is benign in nature? They design EraserIgnoreOn/Off for these benign conditions (and memory resuse, private locks) but it leaves a lot to the user to configure. 
-Another bone I have with this is that some modification of the original source code is required for Eraser to work -- the EraserOn/Off module mentioned now.
+Another bone I have with this is that some modification of the original source code is required for Eraser to work -- the EraserIgnoreOn/Off module mentioned now.
+A clean repot requires editing the source which can hide future bugs.
 
 ## Generic questions I can think of
 
